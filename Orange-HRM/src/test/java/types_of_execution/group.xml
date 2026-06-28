@@ -1,0 +1,21 @@
+
+<suite  parallel="tests" name="suite">
+	<test parallel="tests" name="testrunner">
+		<classes>
+			<class name="testNg_extra.SampleTest" />
+		</classes>
+	</test>
+	
+	<test parallel="tests" name="test">
+		<classes>
+			<class name="testNg_extra.DemoTest" />
+		</classes>
+	</test>
+
+</suite>
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+<suite>
+
+	<test>
+
+
+		<classes>
+
+			<class>
+
+				<methods>
+
+					<include>
+
+
+
+					</include>
+
+
+				</methods>
+
+
+			</class>
+
+
+
+
+
+
+		</classes>
+
+
+
+
+	</test>
+
+
+</suite>
