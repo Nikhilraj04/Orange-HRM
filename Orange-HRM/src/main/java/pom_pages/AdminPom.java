@@ -36,14 +36,14 @@ public class AdminPom {
 		}	
 		
 	
-	@FindBy(xpath = "//label[text()='User Role']") //step-4 click on the user role in the um
+	@FindBy(xpath = "//label[normalize-space()='User Role']/ancestor::div[contains(@class,'oxd-input-group')]//div[contains(@class,'oxd-select-text')]")
 	private WebElement Userrole;
 	
 	public WebElement getUserrole() {
 		return Userrole ;
 		}
 	
-	@FindBy(xpath = "//label[text()='Status']") //step-4 click on the user role in the um
+	@FindBy(xpath = "//label[normalize-space()='Status']/ancestor::div[contains(@class,'oxd-input-group')]//div[contains(@class,'oxd-select-text')]")
 	private WebElement status;
 	
 	public WebElement getStatus() {

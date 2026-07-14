@@ -17,7 +17,7 @@ import baseClass_utility.BaseClass;
 import generic_utility.WebDriverUtility;
 import pom_pages.AdminPom;
 
-@Listeners(listeners_utility.listeners.class)
+
 public class CreateAdmin_Test extends BaseClass {
 	
 	@Test
@@ -51,14 +51,19 @@ public class CreateAdmin_Test extends BaseClass {
 			System.out.println("navigated to add user page");
 		}// Step 3 - click on the add user in the user manangement
 
-		adminP.getUserrole().click();; //step-4 click on the user role in the um======
-		WebDriverUtility wdu = new WebDriverUtility();
-		wdu.getPressKeys(driver);
+		adminP.getUserrole().click(); // Open User Role dropdown
+		new WebDriverWait(driver, Duration.ofSeconds(10))
+				.until(org.openqa.selenium.support.ui.ExpectedConditions
+						.elementToBeClickable(By.xpath("//div[@role='option']/span[normalize-space()='Admin']")))
+				.click();
 //		Actions act = new Actions(driver);
 //		act.sendKeys(Keys.TAB, Keys.DOWN).build().perform();
 		
 		adminP.getStatus().click();
-		wdu.getPressKeys(driver);
+		new WebDriverWait(driver, Duration.ofSeconds(10))
+				.until(org.openqa.selenium.support.ui.ExpectedConditions
+						.elementToBeClickable(By.xpath("//div[@role='option']/span[normalize-space()='Enabled']")))
+				.click();
 //		act.sendKeys(Keys.TAB, Keys.DOWN).build().perform();
 		 
 		
@@ -94,6 +99,5 @@ public class CreateAdmin_Test extends BaseClass {
 		// driver.findElement(By.)
 
 		
-//		driver.quit();
 	}
 }

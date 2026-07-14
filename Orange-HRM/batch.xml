@@ -1,14 +1,14 @@
 <suite name="suite">
+
+  <listeners>
+       <listener class-name= "listeners_utility.listeners"/>
+  </listeners>
+  
 	<test name="test">
 		<classes>
-			<class name="types_of_execution.OrgTest">
-				<methods>
-					<include name="createOrgTest" />
-				</methods>
-			</class>
-
-			<class name="types_of_execution.ContactTest" />
-			<class name="types_of_execution.LeadTest" />
+			<class name="Admin.CreateAdmin_Test" />
+			
 		</classes>
 	</test>
 </suite>
+

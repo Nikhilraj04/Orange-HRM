@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="types_of_execution.ContactTest">
+      <class name="Admin.CreateAdmin_Test">
         <methods>
-          <include name="ContactTest"/>
+          <include name="logout"/>
+          <include name="setUp"/>
+          <include name="login"/>
+          <include name="tearDown"/>
+          <include name="getAdminCreate"/>
         </methods>
-      </class> <!-- types_of_execution.ContactTest -->
+      </class> <!-- Admin.CreateAdmin_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
