@@ -40,7 +40,7 @@ public class BaseClass {
 	 * The browser value is supplied from the suite XML and defaults to Chrome.
 	 */
 	@BeforeClass
-	@Parameters("browser")
+	@Parameters("bro")
 	public void setUp(@Optional("chrome") String browser)
 			throws FileNotFoundException, IOException, ParseException, org.json.simple.parser.ParseException {
 		String BROWSER = browser.toLowerCase();

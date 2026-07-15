@@ -1,13 +1,15 @@
 <suite name="suite">
 
-  <listeners>
-       <listener class-name= "listeners_utility.listeners"/>
-  </listeners>
-  
+	<parameter name="bro" value="edge" />
+
+	<listeners>
+		<listener class-name="listeners_utility.listeners" />
+	</listeners>
+
 	<test name="test">
 		<classes>
 			<class name="Admin.CreateAdmin_Test" />
-			
+
 		</classes>
 	</test>
 </suite>
