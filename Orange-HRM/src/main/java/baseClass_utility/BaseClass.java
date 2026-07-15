@@ -123,15 +123,15 @@ public class BaseClass {
 	 * Logs out from the application after each test method.
 	 * @throws InterruptedException 
 	 */
-	@AfterMethod(alwaysRun = true)
-	public void logout() {
-		if (driver == null) {
-			return;
-		}
-
-		clickWhenReady(By.cssSelector(".oxd-userdropdown-tab"));
-		clickWhenReady(By.xpath("//a[normalize-space()='Logout']"));
+	@AfterMethod
+	public void logout() throws InterruptedException {
+		driver.findElement(By.className("oxd-userdropdown-tab")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='Logout']")).click();
+		
+		System.out.println("Browser logOut successfully");
 	}
+	
 
 	/**
 	 * Closes the browser and clears the thread-local driver after each class.
